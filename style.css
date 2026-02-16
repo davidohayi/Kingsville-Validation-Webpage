@@ -1,0 +1,235 @@
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Header Styling */
+h1 {
+    text-align: center;
+    color: #fff;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    padding: 20px 0;
+}
+
+h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+/* Paragraph Styling */
+body > p {
+    text-align: center;
+    color: #fff;
+    font-size: 1.05em;
+    max-width: 800px;
+    margin: 0 auto 30px;
+    padding: 0 20px;
+}
+
+/* Container for Details */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Details/Accordion Styling */
+details {
+    margin: 20px auto;
+    max-width: 600px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+details:hover {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+    transform: translateY(-2px);
+}
+
+summary {
+    cursor: pointer;
+    padding: 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+    transition: all 0.3s ease;
+}
+
+summary:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+summary::marker {
+    color: #fff;
+}
+
+/* Image Styling */
+details img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 8px;
+    border: 3px solid #667eea;
+    transition: transform 0.3s ease;
+}
+
+details img:hover {
+    transform: scale(1.05);
+}
+
+/* Content Styling within Details */
+details p {
+    padding: 0 20px;
+    margin: 15px 0;
+    color: #333;
+}
+
+details p:first-of-type {
+    margin-top: 0;
+}
+
+details p:last-of-type {
+    padding-bottom: 20px;
+}
+
+/* Name, Role, Bio Styling */
+details > p:nth-of-type(2) {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #667eea;
+}
+
+details > p:nth-of-type(3) {
+    font-weight: 600;
+    color: #764ba2;
+    margin-bottom: 10px;
+}
+
+details > p:nth-of-type(4) {
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Social Media Links Section */
+details > p:contains("Social media links") {
+    font-weight: 600;
+    color: #667eea;
+    margin-top: 20px;
+}
+
+details a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+details a:hover {
+    color: #764ba2;
+    border-bottom-color: #764ba2;
+    padding-bottom: 2px;
+}
+
+details a:active {
+    color: #555;
+}
+
+/* Social Media Links List */
+details p:has(a[href^="tel:"]),
+details p:has(a[href^="mailto:"]),
+details p:has(a[href*="linkedin"]),
+details p:has(a[href*="instagram"]),
+details p:has(a[href*="twitter"]),
+details p:has(a[href*="github"]) {
+    padding: 8px 20px;
+    margin: 5px 0;
+    background: #f8f9ff;
+    border-left: 4px solid #667eea;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    body > p {
+        font-size: 0.95em;
+    }
+
+    details {
+        max-width: 100%;
+    }
+
+    summary {
+        padding: 15px;
+        font-size: 1.1em;
+    }
+
+    details img {
+        max-width: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1em;
+    }
+
+    details {
+        margin: 15px 0;
+    }
+
+    summary {
+        padding: 12px;
+        font-size: 1em;
+    }
+
+    details img {
+        max-width: 200px;
+    }
+
+    details p {
+        padding: 0 15px;
+        font-size: 0.95em;
+    }
+}
